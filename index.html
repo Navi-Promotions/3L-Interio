@@ -9,6 +9,7 @@
     <meta name="description" content="3L Interio offers engineering-precision factory-made interiors in Theni. Experts in Modular Kitchens, Wardrobes & Commercial Interiors since 2015." />
     <meta name="keywords" content="Factory-made interiors in Theni, Modular kitchen Theni, Interior designers in Theni, Wardrobes Theni, 3L Interio" />
     
+    <!-- Tailwind CSS (CDN for simplicity, migration to PostCSS recommended for large apps) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -16,12 +17,12 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Manrope', 'sans-serif'], // Changed to Manrope for a more modern, engineered feel
+              sans: ['Manrope', 'sans-serif'],
             },
             colors: {
               primary: '#0a0a0a', // Rich Black
-              secondary: '#fbbf24', // Amber/Gold (Matching the logo)
-              accent: '#d97706', // Darker Gold for hover
+              secondary: '#fbbf24', // Amber/Gold
+              accent: '#d97706', // Darker Gold
               'gray-light': '#f8fafc',
               'dark-surface': '#171717',
             }
@@ -41,14 +42,14 @@
   <script type="importmap">
 {
   "imports": {
-    "vite": "https://esm.sh/vite@^7.3.1",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
     "framer-motion": "https://esm.sh/framer-motion@^12.29.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>

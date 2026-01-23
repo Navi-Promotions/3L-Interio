@@ -1,20 +1,10 @@
 import { GoogleGenAI } from "@google/genai";
 
 // Initialize Gemini Client
-// Note: In a production environment, ensure process.env.API_KEY is set.
-// This service assumes the key is available.
-const apiKey = process.env.API_KEY || ''; 
-let ai: GoogleGenAI | null = null;
-
-if (apiKey) {
-  ai = new GoogleGenAI({ apiKey });
-}
+// The API key must be obtained exclusively from the environment variable process.env.API_KEY.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getDesignAdvice = async (question: string): Promise<string> => {
-  if (!ai) {
-    return "I'm currently offline (API Key missing). Please contact our showroom directly for advice!";
-  }
-
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
